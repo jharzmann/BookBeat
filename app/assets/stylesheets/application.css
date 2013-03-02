@@ -18,6 +18,15 @@ h1 {
     text-shadow: -1px 1px #eee;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .box {
     width: 32em;    
     height: 3em;
@@ -27,20 +36,29 @@ h1 {
     background: -moz-radial-gradient(center, ellipse cover,  rgba(254,254,254,1) 54%, rgba(226,226,226,1) 94%); /* FF3.6+ */
     background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,254,254,1) 54%,rgba(226,226,226,1) 94%); /* Chrome10+,Safari5.1+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+    float: left;
+    margin-right: 15px;
 }
 
 input {
     border: none;
-    width: 499px;
+    width: 491px;
     height: 38px;
     margin-top: 4px;
     margin-left: 6px;
     border-radius: 3px;
+    padding: 0 5px;
     
 }
 
 button {
-    width: 200px;
-    height: 30px;
+    width: 69px;
+    height: 49px;   
+    border-radius: 5px;
+    background: white;
+}
+
+.wrap {
+    clear: both;
+    padding: 20px 10px;
 }
