@@ -14,8 +14,6 @@ class Catalog < ActiveRecord::Base
       # get all kinds of resources?
       track_links = []
       track_element = []
-      sampleIDs = ['81235024', '79842096', '80366674', '79869359', '81303712',
-                  '80331719', '80045407', '79973942', '79914281', '80781146']
       catalogs.each do | catalog |
         track = client.get('/tracks/' + catalog.song_id)
         track_element = []

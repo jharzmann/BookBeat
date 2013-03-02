@@ -8,11 +8,12 @@ $(document).ready(function(){
                     $('.wrap').append(link).append("<br />"+"<br />");
                     link.click(function(){
                         console.log(element.book.id);
-                        $.get('/home/search', element.book.id);
+                        $(location).attr('href', '/catalogs/' + element.book.id);
                     });
                 });
-                
-                
+
+
             });
         });
     })
+

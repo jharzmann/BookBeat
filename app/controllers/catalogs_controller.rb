@@ -13,16 +13,15 @@ class CatalogsController < ApplicationController
   # GET /catalogs/1
   # GET /catalogs/1.json
   def show
-#    @catalogs = Catalog.find(params[:id])
     @catalogs = Catalog.find(:all, :conditions => { :id => params[:id]} )
     if (@catalogs.empty?)
-      redirect_to 'http://www.google.com'
+      @catalog = Catalog.new(:book_id => params[:id], :song_id => 'null')
     else
       @catalog = @catalogs.first
-      respond_to do |format|
-        format.html # show.html.erb
-        format.json { render json: @catalog }
-      end
+    end
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @catalog }
     end
   end
 
