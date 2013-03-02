@@ -1,4 +1,6 @@
 BookBeat::Application.routes.draw do
+  resources :catalogs
+
   root :to => "home#index"
   get "home/search"
 

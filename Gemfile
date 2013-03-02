@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'httparty', "~> 0.10.2"
+gem 'soundcloud', "~> 0.3.1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

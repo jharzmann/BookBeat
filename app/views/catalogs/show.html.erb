@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing songs</h1>
+
+<p>
+  <b>Book:</b>
+  <%= @catalog.book_id %>
+</p>
+
+<% Catalog.getAllSongIdsFor(@catalog.book_id).each do |song| %>
+  <b>Song:</b> <%= link_to song[0], song[1] %>
+  <br/ >
+<% end %>
+
+<br/>
+
