@@ -13,11 +13,16 @@ class CatalogsController < ApplicationController
   # GET /catalogs/1
   # GET /catalogs/1.json
   def show
-    @catalog = Catalog.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @catalog }
+#    @catalogs = Catalog.find(params[:id])
+    @catalogs = Catalog.find(:all, :conditions => { :id => params[:id]} )
+    if (@catalogs.empty?)
+      redirect_to 'http://www.google.com'
+    else
+      @catalog = @catalogs.first
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @catalog }
+      end
     end
   end
 
@@ -41,7 +46,8 @@ class CatalogsController < ApplicationController
   # POST /catalogs.json
   def create
     puts params[:catalog]
-    @catalog = Catalog.new(params[:catalog])
+    catalog_details = params[:catalog]
+    @catalog = Catalog.new(catalog_details)
 
     respond_to do |format|
       if @catalog.save
