@@ -1,3 +1,9 @@
-<h3>Search for a book</h3>
+<h1>Search for a Book</h1>
 
-<input type="search" name="search" />
+<form method="get" action="https://api.readmill.com/v2/books/search"> 
+  <div class="box">
+    <input type="text" name="query"/>
+  </div>
+  <input type="hidden" name="client_id" value="3c3e949307f81c6445f04491b5843609">
+  <button type="submit" value="submit"></button>
+</form>

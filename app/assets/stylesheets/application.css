@@ -5,3 +5,42 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+    width: 50%;
+    margin: 0 auto;
+    font-family: serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 100;
+    text-shadow: -1px 1px #eee;
+}
+
+.box {
+    width: 32em;    
+    height: 3em;
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    background: rgb(254,254,254); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(254,254,254,1) 54%, rgba(226,226,226,1) 94%); /* FF3.6+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,254,254,1) 54%,rgba(226,226,226,1) 94%); /* Chrome10+,Safari5.1+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+input {
+    border: none;
+    width: 499px;
+    height: 38px;
+    margin-top: 4px;
+    margin-left: 6px;
+    border-radius: 3px;
+    
+}
+
+button {
+    width: 200px;
+    height: 30px;
+}
