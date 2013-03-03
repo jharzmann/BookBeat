@@ -28,9 +28,8 @@ $(document).ready(function(){
     console.log(data);
     $(".book-stuff").html("Author: " + data.book.author + "<br>"
     + "Title: " + data.book.title + "<br>");
-    var image = "<div id='image'><img src=" + data.book.cover_url + " alt='some_text'></div>";
+    var image = "<div id='image'><img src=" + data.book.cover_url + " alt='book cover'></div>";
     $('.book-stuff').append(image);
-    console.log(data.book.image_url)
   });
 });
 </script>
@@ -50,9 +49,4 @@ $(document).ready(function(){
 <% end %>
 
 <br/>
-
-<div class=footer>
-  <p>BOOKBEAT created by <a href="http://www.designbygio.it">@designbygio</a> - Josi Harzmann - Anna Rose - Hannah Schoenholz </p>
-  <p>at Berlin Geekettes Hackathon 2013 - An app for Readmill</p>
-</div>
 
