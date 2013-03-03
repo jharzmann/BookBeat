@@ -57,12 +57,30 @@ h3.song-page {
     color: #cc0000;
 }
 
+.book-stuff.last {
+    text-align: left;
+    margin-top: 60px;
+    position: relative;
+    left: -200px;
+    width: 400px;
+}
+
+.book-stuff.last .image{
+    float: left;
+    margin-right: 20px;
+    margin-top: -7px;
+}
+
+.book-stuff.last h2{
+    font-size: 1.0em;
+}
+
 h2.suggest-song {
     text-align: center;
     margin: 70px 0 30px 0
 }
 
-h1.red {
+.red {
     color: #cc0000;
 }
 

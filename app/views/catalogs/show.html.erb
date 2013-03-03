@@ -37,7 +37,7 @@ $(document).ready(function(){
     <div class="title-song"><b>Song:</b> <%= link_to song[0], song[1] %></div>
     <div id="<%= new_div_id %>" width="500" style="float: right; margin-top: 28px;">
     </div>
-    <div class="check"><input type="checkbox" name="song"/></div>
+    <div class="check"><input type="checkbox" name="song" checked/></div>
     <br/ >
     <script type="text/JavaScript">
       SC.oEmbed('<%= song[1] %>', {color: "CC0000", maxwidth: "500"},
