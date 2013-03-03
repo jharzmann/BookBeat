@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 <% i = 0 %>
 
-<% Catalog.getAllSongIdsFor(@catalog.book_id) .each do |song| %>
+<% Catalog.getAllSongIdsFor(@catalog.book_id).each do |song| %>
   <% new_div_id = "putTheWidgetHere" + i.to_s %>
   <b>Song:</b> <%= link_to song[0], song[1] %>
   <div id="<%= new_div_id %>"></div>

@@ -7,11 +7,11 @@ $(document).ready(function(){
                     //var pic = element.book.cover_url;
                     //var showPic = $(pic).click(function(){
                     //                    $("p").show();
-                    //            });     
+                    //            });
                     var link = $("<a href=\"#" + "\">"+ "<br />" +element.book.author+ "<br />" +element.book.title+ "<br />" +element.book.cover_url+"</a>");
                     $('.wrap').append(link).append("<br />"+"<br />");
-                    
-                    
+
+
                     // get book.id for each link.click
                     link.click(function(){
                         //console.log(element.book.id);
@@ -22,8 +22,8 @@ $(document).ready(function(){
 
             });
         });
-        
-        
+
+
         // Submit pushing enter key
         $('#query').keypress(function(event){
                 if(event.keyCode == 13){
