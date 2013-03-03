@@ -7,6 +7,11 @@ SC.initialize({
 
 <p id="notice"><%= notice %></p>
 
+<div class="header">
+  <a href="/"><div class="logo"></div></a>
+  <div class="user"></div>
+</div>
+<h3 class="song-page"> <a href="/home/search"><< Back to the book result</a></h3>
 <h1>Listing songs</h1>
 
 <p>
@@ -33,7 +38,6 @@ $(document).ready(function(){
 <% i = 0 %>
 
 <% Catalog.getAllSongIdsFor(@catalog.book_id) .each do |song| %>
-  <% puts "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NEW SONG!" %>
   <% new_div_id = "putTheWidgetHere" + i.to_s %>
   <b>Song:</b> <%= link_to song[0], song[1] %>
   <div id="<%= new_div_id %>"></div>
@@ -44,4 +48,11 @@ $(document).ready(function(){
   </script>
   <% i += 1 %>
 <% end %>
+
+<br/>
+
+<div class=footer>
+  <p>BOOKBEAT created by <a href="http://www.designbygio.it">@designbygio</a> - Josi Harzmann - Anna Rose - Hannah Schoenholz </p>
+  <p>at Berlin Geekettes Hackathon 2013 - An app for Readmill</p>
+</div>
 

@@ -41,6 +41,14 @@ h3.homepage {
     margin-top: 0;    
 }
 
+h3.song-page {
+    margin-top: 50px;
+    position: relative;
+    left: -364px;
+    font-size: 0.8em
+}
+
+
 a {
     color: black;
     text-decoration: none;
