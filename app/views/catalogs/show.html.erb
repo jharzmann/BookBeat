@@ -12,12 +12,8 @@ SC.initialize({
   <div class="user"></div>
 </div>
 <h3 class="song-page"> <a href="/home/search"><< Back to the book result</a></h3>
-<h1>Listing songs</h1>
 
-<p>
-  <b>BookID:</b>
-  <%= @catalog.book_id %>
-</p>
+<% @catalog.book_id %>
 
 <div class="book-stuff"></div>
 <% image_url = "" %>
@@ -25,11 +21,10 @@ SC.initialize({
 $(document).ready(function(){
   $.getJSON('https://api.readmill.com/v2/books/'+ "<%= @catalog.book_id %>"
   +'.json?client_id=3c3e949307f81c6445f04491b5843609&callback=?', function(data) {
-    console.log(data);
-    $(".book-stuff").html("Author: " + data.book.author + "<br>"
-    + "Title: " + data.book.title + "<br>");
-    var image = "<div id='image'><img src=" + data.book.cover_url + " alt='book cover'></div>";
+    $(".book-stuff").html("<h2>" + data.book.author+"</h2>" +"<h2>"+ " by " + data.book.title+ "</h2>" + "<br>");
+    var image = "<div class='image'><img src=" + data.book.cover_url + " alt='book cover'></div>";
     $('.book-stuff').append(image);
+
   });
 });
 </script>
@@ -39,10 +34,12 @@ $(document).ready(function(){
 <% Catalog.getAllSongIdsFor(@catalog.book_id).each do |song| %>
   <% new_div_id = "putTheWidgetHere" + i.to_s %>
   <b>Song:</b> <%= link_to song[0], song[1] %>
-  <div id="<%= new_div_id %>"></div>
+  <div id="<%= new_div_id %>" width="500" style="float: right; margin-top: 28px;">
+  </div>
+  <div class="check"><input type="checkbox" name="song"/></div>
   <br/ >
   <script type="text/JavaScript">
-    SC.oEmbed('<%= song[1] %>', {color: "ff0066", maxwidth: "550"},
+    SC.oEmbed('<%= song[1] %>', {color: "ff0066", maxwidth: "500"},
     document.getElementById("<%= new_div_id %>"));
   </script>
   <% i += 1 %>
