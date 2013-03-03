@@ -198,3 +198,15 @@ input[type="checkbox"]{
     margin-right: 18px;
     margin-top: 20px;
 }
+
+input#playlist {
+    background-image: none;
+    width: 460px;
+}
+
+button.playlist {
+    width: 84px;
+    height: 52px;
+    top: 9px;
+    position: relative;
+}
