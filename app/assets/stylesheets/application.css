@@ -201,16 +201,26 @@ input[type="checkbox"]{
 }
 
 input#playlist {
-    background-image: url("cross.png") no-repeat;
+    background: none;
     width: 578px;
+    float: left;
 }
 
+.cross{
+    background: url("cross.png") no-repeat center right;
+    width: 30px;
+    height: 21px;
+    float: right;
+    margin-top: -34px;
+    margin-right: -14px;
+}
 button.playlist {
     width: 184px;
     height: 52px;
     top: 9px;
     position: relative;
     margin: 0 37%;
+    margin-top: 10px;
 }
 
 .title-song {
