@@ -13,6 +13,8 @@ SC.initialize({
 </div>
 <h3 class="song-page"> <a href="/home/search"><< Back to the book result</a></h3>
 
+<% @catalog.book_id %>
+
 <div class="book-stuff"></div>
 <% image_url = "" %>
 <script>
@@ -22,20 +24,19 @@ $(document).ready(function(){
     $(".book-stuff").html("<h2>" + data.book.author+"</h2>" +"<h2>"+ " by " + data.book.title+ "</h2>" + "<br>");
     var image = "<div class='image'><img src=" + data.book.cover_url + " alt='book cover'></div>";
     $('.book-stuff').append(image);
-    
+
   });
 });
 </script>
 
 <% i = 0 %>
 
-<% Catalog.getAllSongIdsFor(@catalog.book_id) .each do |song| %>
+<% Catalog.getAllSongIdsFor(@catalog.book_id).each do |song| %>
   <% new_div_id = "putTheWidgetHere" + i.to_s %>
   <b>Song:</b> <%= link_to song[0], song[1] %>
   <div id="<%= new_div_id %>" width="500" style="float: right; margin-top: 28px;">
   </div>
   <div class="check"><input type="checkbox" name="song"/></div>
-  
   <br/ >
   <script type="text/JavaScript">
     SC.oEmbed('<%= song[1] %>', {color: "ff0066", maxwidth: "500"},
@@ -43,6 +44,8 @@ $(document).ready(function(){
   </script>
   <% i += 1 %>
 <% end %>
+
+
 
 <br/>
 

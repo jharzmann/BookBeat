@@ -24,6 +24,11 @@ class Catalog < ActiveRecord::Base
       track_links
     end
 
+    def getIDOfSong(url)
+      client = Soundcloud.new(:client_id => 'e5827bb602f60810667a81ca65823de3')
+      track = client.get('/resolve', :url => url)
+    end
+
   end
 
 end
