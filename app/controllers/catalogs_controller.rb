@@ -44,7 +44,6 @@ class CatalogsController < ApplicationController
   # POST /catalogs
   # POST /catalogs.json
   def create
-    puts params[:catalog]
     catalog_details = params[:catalog]
     @catalog = Catalog.new(catalog_details)
 
@@ -86,5 +85,10 @@ class CatalogsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  # GET
+  def playlist
+  end
+
 end
 

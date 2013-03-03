@@ -9,5 +9,9 @@ class HomeController < ApplicationController
   def search
   end
 
+  # GET
+  def playlist
+  end
+
 end
 
