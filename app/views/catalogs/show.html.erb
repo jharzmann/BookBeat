@@ -42,11 +42,13 @@ $(document).ready(function(){
   <div id="<%= new_div_id %>"></div>
   <br/ >
   <script type="text/JavaScript">
-    SC.oEmbed('<%= song[1] %>', {color: "ff0066"},
+    SC.oEmbed('<%= song[1] %>', {color: "ff0066", maxwidth: "550"},
     document.getElementById("<%= new_div_id %>"));
   </script>
   <% i += 1 %>
 <% end %>
+
+
 
 <br/>
 
