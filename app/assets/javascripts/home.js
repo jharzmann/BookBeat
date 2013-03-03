@@ -7,7 +7,7 @@ $(document).ready(function(){
                     var link = $("<a href=\"#" + "\">"+ " " +element.book.author+" " +element.book.title+" " +element.book.cover_url+"</a>");
                     $('.wrap').append(link).append("<br />"+"<br />");
                     link.click(function(){
-                        console.log(element.book.id);
+                        //console.log(element.book.id);
                         $(location).attr('href', '/catalogs/' + element.book.id);
                     });
                 });
