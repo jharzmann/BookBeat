@@ -188,7 +188,8 @@ button.homepage {
     border: 1px solid #ccc;
     border-radius: 5px;
     position: relative;
-    top: 33px;
+    top: 57px;
+    margin-bottom: 122px;
     
 }
 
@@ -197,4 +198,31 @@ input[type="checkbox"]{
     width: 20px;
     margin-right: 18px;
     margin-top: 20px;
+}
+
+input#playlist {
+    background: none;
+    width: 578px;
+    float: left;
+}
+
+.cross{
+    background: url("cross.png") no-repeat center right;
+    width: 30px;
+    height: 21px;
+    float: right;
+    margin-top: -34px;
+    margin-right: -14px;
+}
+button.playlist {
+    width: 184px;
+    height: 52px;
+    top: 9px;
+    position: relative;
+    margin: 0 37%;
+    margin-top: 10px;
+}
+
+.title-song {
+    margin-bottom: -25px;
 }

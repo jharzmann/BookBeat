@@ -8,7 +8,6 @@ $(document).ready(function(){
                         //$('.wrap').append(image);
                     var link = $("<a href=\"#" + "\">"+ image +"<p>" +element.book.author+ "</p>"+"<p>"+element.book.title+"</p>"+"</a>");
                         $('.wrap').append(link).append("<br />"+"<br />");
-
                     // get book.id for each link.click
                     link.click(function(){
                         //console.log(element.book.id);
