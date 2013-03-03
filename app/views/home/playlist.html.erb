@@ -10,6 +10,23 @@ SC.initialize({
   <div class="user"></div>
 </div>
 
+<!-- <h3 class="song-page"> <a href="/home/catalogs/"><< Back to the book result</a></h3> -->
+
+<h1 class="red">Great choice!</h1>
+<h3>Have fun with your music and book!</h3>
+
+<div class="book-stuff"></div>
+<% image_url = "" %>
+<script>
+$(document).ready(function(){
+  $.getJSON('https://api.readmill.com/v2/books/40122' +'.json?client_id=3c3e949307f81c6445f04491b5843609&callback=?', function(data) {
+    $(".book-stuff").html("<h2>" + data.book.title+"</h2>" +"<h2>"+ " by " + data.book.author+ "</h2>" + "<br>");
+    var image = "<div class='image'><img src=" + data.book.cover_url + " alt='book cover'></div>";
+    $('.book-stuff').append(image);
+
+  });
+});
+</script>
 <div id="putTheWidgetHere"></div>
 
 <script type="text/JavaScript">
